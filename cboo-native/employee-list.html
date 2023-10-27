@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CBOO Admin</title>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/CBOO-logo.png"/>
+
+	<!-- Import lib -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<!-- End import lib -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="overlay-scrollbar">
+	<!-- navbar -->
+    <div id="topnavbar-placeholder"></div>
+	<!-- end navbar -->
+	<!-- sidebar -->
+    <div id="sidebar-placeholder"></div>
+	<!-- end sidebar -->
+	<!-- main content -->
+	<div class="wrapper">
+        <div class="row">
+            <div class="col-3">
+                <div class="counter bg-primary">
+					<p>
+						<i class="fas fa-users"></i>
+					</p>
+					<h3>999</h3>
+					<p>Total Employees</p>
+				</div>
+            </div>
+            <div class="col-3">
+                <div class="counter bg-success">
+					<p>
+						<i class="fas fa-users"></i>
+					</p>
+					<h3>400,000.00</h3>
+					<p>Total Monthly Salary</p>
+				</div>
+            </div>
+            <div class="col-3">
+                <div class="counter bg-warning">
+					<p>
+						<i class="fas fa-users"></i>
+					</p>
+					<h3>+100</h3>
+					<p>New Employees</p>
+				</div>
+            </div>
+            <div class="col-3">
+                <div class="counter bg-danger">
+					<p>
+						<i class="fas fa-users"></i>
+					</p>
+					<h3>0</h3>
+					<p>Employees without Position</p>
+				</div>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-9 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+                            Employee List
+						</h3>
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+					<div class="card-content">
+						<table>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Project</th>
+									<th>Employee</th>
+									<th>Status</th>
+                                    <th>Employment date</th>
+                                    <th>Position</th>
+									<th>Salary Grade</th>
+                                    <th>Step</th>
+                                    <th>Monthly Salary</th>
+									<th>Place of Assignment</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1004</td>
+									<td>GAA</td>
+									<td>John Doe</td>
+									<td>
+										<span class="dot">
+											<i class="bg-success"></i>
+											Employed
+										</span>
+									</td>
+                                    <td>17/07/2020</td>
+                                    <td>Professor I</td>
+                                    <td>16</td>
+                                    <td>2</td>
+                                    <td>49,000.00</td>
+                                    <td>College of Agriculture</td>
+                                    <td>
+										<div class="avt action">
+											<div class="actionbtn" id="action-btn">
+												<i class="fas fa-ellipsis-h"></i>
+											</div>
+											<ul id="action-menu" class="action-menu">
+												<li class="action-menu-item">
+													<div class="action-card">
+														<i class="fas fa-edit"></i>
+														<span>Edit</span>
+													</div>
+												</li>
+												<li class="action-menu-item">
+													<div class="action-card">
+														<i class="fas fa-trash"></i>
+														<span>Delete</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+										
+										
+                                    </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-3 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Employees per Project 
+						</h3>
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+					<div class="card-content">
+						<div class="progress-wrapper">
+							<p>
+								Project I: GASS
+								<span class="float-right">50%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-success" style="width: 50%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Project II: TOTAL HIGHER EDUCATION SERVICES - SECONDARY
+								<span class="float-right">60%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-primary" style="width:60%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Project III: 
+								<span class="float-right">40%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-warning" style="width:40%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Project IV:
+								<span class="float-right">20%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-danger" style="width:20%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<!-- end main content -->
+	<!-- import script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+	<!-- end import script -->
+</body>
+</html>

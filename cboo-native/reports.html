@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CBOO Admin</title>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/CBOO-logo.png"/>
+
+	<!-- Import lib -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<!-- End import lib -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="overlay-scrollbar">
+	<!-- navbar -->
+    <div id="topnavbar-placeholder"></div>
+	<!-- end navbar -->
+	<!-- sidebar -->
+    <div id="sidebar-placeholder"></div>
+	<!-- end sidebar -->
+	<!-- main content -->
+	<div class="wrapper">
+        <div class="row">
+           <div class="col-12">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Reports Builder</h3>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                      
+                            <div class="col-3">
+                                <h4> Choose Report </h4>
+                                <div class="avt dropdown">
+                                   
+                                    <div class="dropdownbtn dropdown-toggle" data-toggle="report-menu">
+                                        Select Report Name <i class="fas fa-angle-down"></i>
+                                    </div>
+                                    
+                                    <ul id="report-menu" class="dropdown-menu">
+                                        <li class="dropdown-menu-item">
+                                            <a class="dropdown-menu-link">
+                                                <div>
+                                                    <i class="fas fa-file-alt"></i>
+                                                </div>
+                                                <span>General Plantilla Payroll Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-menu-item">
+                                            <a href="#" class="dropdown-menu-link">
+                                                <div>
+                                                    <i class="fas fa-clock"></i>
+                                                </div>
+                                                <span>Night Differential Payroll Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-menu-item">
+                                            <a href="#" class="dropdown-menu-link">
+                                                <div>
+                                                    <i class="fas fa-baby"></i>
+                                                </div>
+                                                <span>Maternal Leave Payroll Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-menu-item">
+                                            <a href="#" class="dropdown-menu-link">
+                                                <div>
+                                                    <i class="fas fa-handshake"></i>
+                                                </div>
+                                                <span>CNA Payroll Report</span>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-menu-item">
+                                            <a href="#" class="dropdown-menu-link">
+                                                <div>
+                                                    <i class="fas fa-users"></i>
+                                                </div>
+                                                <span>PVP Payroll Report</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="wrapper2">
+                                    <label for="start-date">Start Date:</label>
+                                    <input type="text" id="start-date" class="datepicker">
+                                    
+                                    <label for="end-date">End Date:</label>
+                                    <input type="text" id="end-date" class="datepicker">	
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                    </div>
+                </div>
+           </div>
+        </div>
+		<div class="row">
+			<div class="col-9 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+                            Report Preview
+						</h3>
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+					<div class="card-content">
+						<table>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Project</th>
+									<th>Employee</th>
+									<th>Status</th>
+                                    <th>Employment date</th>
+                                    <th>Position</th>
+									<th>Salary Grade</th>
+                                    <th>Step</th>
+                                    <th>Monthly Salary</th>
+									<th>Place of Assignment</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1004</td>
+									<td>GAA</td>
+									<td>John Doe</td>
+									<td>
+										<span class="dot">
+											<i class="bg-success"></i>
+											Employed
+										</span>
+									</td>
+                                    <td>17/07/2020</td>
+                                    <td>Professor I</td>
+                                    <td>16</td>
+                                    <td>2</td>
+                                    <td>49,000.00</td>
+                                    <td>College of Agriculture</td>
+                                
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-3 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Employees per Project 
+						</h3>
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+					<div class="card-content">
+						<div class="progress-wrapper">
+							<p>
+								Project I: GASS
+								<span class="float-right">50%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-success" style="width: 50%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Project II: TOTAL HIGHER EDUCATION SERVICES - SECONDARY
+								<span class="float-right">60%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-primary" style="width:60%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Project III: 
+								<span class="float-right">40%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-warning" style="width:40%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Project IV:
+								<span class="float-right">20%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-danger" style="width:20%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<!-- end main content -->
+	<!-- import script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+	<!-- end import script -->
+</body>
+</html>

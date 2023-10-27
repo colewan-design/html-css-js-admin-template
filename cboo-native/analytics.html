@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CBOO Admin</title>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/CBOO-logo.png"/>
+	<link rel="manifest" href="manifest.json">
+	<!-- Import lib -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<!-- End import lib -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="overlay-scrollbar">
+	<!-- navbar -->
+	<div class="navbar">
+		<!-- nav left -->
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link">
+					<i class="fas fa-bars" onclick="collapseSidebar()"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<img src="assets/CBOO-logo.png" alt="CBOO logo" class="logo logo-light">
+				<img src="assets/CBOO-logo.png" alt="CBOO logo" class="logo logo-dark">
+			</li>
+		</ul>
+		<!-- end nav left -->
+		<!-- form -->
+		<form class="navbar-search">
+			<input type="text" name="Search" class="navbar-search-input" placeholder="What you looking for...">
+			<i class="fas fa-search"></i>
+		</form>
+		<!-- end form -->
+		<!-- nav right -->
+		<div id="topnavbar-placeholder"></div>
+		<!-- end nav right -->
+	</div>
+	<!-- end navbar -->
+	<!-- sidebar -->
+	<div id="sidebar-placeholder"></div>
+	<!-- end sidebar -->
+	<!-- main content -->
+	<div class="wrapper">
+	
+		
+		<div class="row">
+            <div class="col-6 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Bar
+						</h3>
+					</div>
+					<div class="card-content">
+						<canvas id="barChart"></canvas>
+					</div>
+				</div>
+            </div>
+
+            <div class="col-3 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Pie
+						</h3>
+					</div>
+					<div class="card-content" style="height:460px;"> 
+						<canvas id="pieChart"></canvas>
+					</div>
+				</div>
+            </div>
+
+            <div class="col-3 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Pie
+						</h3>
+					</div>
+					<div class="card-content" style="height:460px;"> 
+						<canvas id="bubbleChart"></canvas>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter  bg-primary">
+					<p>
+						<i class="fas fa-users"></i>
+					</p>
+					<h3>+100</h3>
+					<p>Total Users</p>
+				</div>
+			</div>
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-warning">
+					<p>
+						<i class="fas fa-spinner"></i>
+					</p>
+					<h3>100+</h3>
+					<p>Total Employees</p>
+				</div>
+			</div>
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-success">
+					<p>
+						<i class="fas fa-check-circle"></i>
+					</p>
+					<h3>100+</h3>
+					<p>Total issued payslips</p>
+				</div>
+			</div>
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-danger">
+					<p>
+						<i class="fas fa-bug"></i>
+					</p>
+					<h3>100+</h3>
+					<p> System Issues</p>
+				</div>
+            </div>
+            	<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-success">
+					<p>
+						<i class="fas fa-check-circle"></i>
+					</p>
+					<h3>100+</h3>
+					<p>Completed Payslips</p>
+				</div>
+			</div>
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-danger">
+					<p>
+						<i class="fas fa-bug"></i>
+					</p>
+					<h3>100+</h3>
+					<p> System Issues</p>
+				</div>
+			</div>
+        </div>
+        
+        <div class="row">
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter  bg-primary">
+					<p>
+						<i class="fas fa-users"></i>
+					</p>
+					<h3>+100</h3>
+					<p>New Employees</p>
+				</div>
+			</div>
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-warning">
+					<p>
+						<i class="fas fa-spinner"></i>
+					</p>
+					<h3>100+</h3>
+					<p>Payroll in Progress</p>
+				</div>
+			</div>
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-success">
+					<p>
+						<i class="fas fa-check-circle"></i>
+					</p>
+					<h3>100+</h3>
+					<p>Completed Payslips</p>
+				</div>
+			</div>
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-danger">
+					<p>
+						<i class="fas fa-bug"></i>
+					</p>
+					<h3>100+</h3>
+					<p> System Issues</p>
+				</div>
+            </div>
+            	<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-success">
+					<p>
+						<i class="fas fa-check-circle"></i>
+					</p>
+					<h3>100+</h3>
+					<p>Completed Payslips</p>
+				</div>
+			</div>
+			<div class="col-2 col-m-6 col-sm-6">
+				<div class="counter bg-danger">
+					<p>
+						<i class="fas fa-bug"></i>
+					</p>
+					<h3>100+</h3>
+					<p> System Issues</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main content -->
+	<!-- import script -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="index.js"></script>
+	<script src="script.js"></script>
+    <!-- end import script -->
+    
+    <script>
+     const ctx1 = document.getElementById('barChart');
+     const ctx2 = document.getElementById('pieChart');
+     const ctx3 = document.getElementById('bubbleChart');
+      new Chart(ctx1, {
+        type: 'bar',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+        // pie
+        new Chart(ctx2, {
+                type: 'pie',
+                data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+                },
+                options: {
+                scales: {
+                    y: {
+                    beginAtZero: true
+                    }
+                }
+                }
+            });
+
+             // pie
+        new Chart(ctx3, {
+                type: 'bubble',
+                data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+                },
+                options: {
+                scales: {
+                    y: {
+                    beginAtZero: true
+                    }
+                }
+                }
+            });
+    </script>
+</body>
+</html>

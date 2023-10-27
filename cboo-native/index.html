@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CBOO Admin</title>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/CBOO-logo.png"/>
+	<link rel="manifest" href="manifest.json">
+	<!-- Import lib -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<!-- End import lib -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="overlay-scrollbar">
+	<!-- navbar -->
+	<div class="navbar">
+		<!-- nav left -->
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link">
+					<i class="fas fa-bars" onclick="collapseSidebar()"></i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<img src="assets/CBOO-logo.png" alt="CBOO logo" class="logo logo-light">
+				<img src="assets/CBOO-logo.png" alt="CBOO logo" class="logo logo-dark">
+			</li>
+		</ul>
+		<!-- end nav left -->
+		<!-- form -->
+		<form class="navbar-search">
+			<input type="text" name="Search" class="navbar-search-input" placeholder="What you looking for...">
+			<i class="fas fa-search"></i>
+		</form>
+		<!-- end form -->
+		<!-- nav right -->
+		<div id="topnavbar-placeholder"></div>
+		<!-- end nav right -->
+	</div>
+	<!-- end navbar -->
+	<!-- sidebar -->
+	<div id="sidebar-placeholder"></div>
+	<!-- end sidebar -->
+	<!-- main content -->
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-primary">
+					<p>
+						<i class="fas fa-users"></i>
+					</p>
+					<h3>+100</h3>
+					<p>New Employees</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-warning">
+					<p>
+						<i class="fas fa-spinner"></i>
+					</p>
+					<h3>100+</h3>
+					<p>Payroll in Progress</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-success">
+					<p>
+						<i class="fas fa-check-circle"></i>
+					</p>
+					<h3>100+</h3>
+					<p>Completed Payslips</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-danger">
+					<p>
+						<i class="fas fa-bug"></i>
+					</p>
+					<h3>100+</h3>
+					<p> System Issues</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-8 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							<a href="employee-list.html">Employee List</a>
+						</h3>
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+					<div class="card-content">
+						<table>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Project</th>
+									<th>Employee</th>
+									<th>Status</th>
+									<th>Employment date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1004</td>
+									<td>GAA</td>
+									<td>John Doe</td>
+									<td>
+										<span class="dot">
+											<i class="bg-success"></i>
+											Employed
+										</span>
+									</td>
+									<td>17/07/2020</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Task Progress
+						</h3>
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+					<div class="card-content">
+						<div class="progress-wrapper">
+							<p>
+								Anniversary Bonus Payroll
+								<span class="float-right">50%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-success" style="width: 50%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Night Shift Payroll
+								<span class="float-right">60%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-primary" style="width:60%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Maternal Leave Payroll
+								<span class="float-right">40%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-warning" style="width:40%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								General Plantilla Payroll
+								<span class="float-right">20%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-danger" style="width:20%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Chartjs
+						</h3>
+					</div>
+					<div class="card-content">
+						<canvas id="myChart"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main content -->
+	<!-- import script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+	<script src="index.js"></script>
+	<script src="script.js"></script>
+	<!-- end import script -->
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CBOO Admin</title>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/CBOO-logo.png"/>
+
+	<!-- Import lib -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<!-- End import lib -->
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="overlay-scrollbar">
+	<!-- navbar -->
+    <div id="topnavbar-placeholder"></div>
+	<!-- end navbar -->
+	<!-- sidebar -->
+    <div id="sidebar-placeholder"></div>
+	<!-- end sidebar -->
+	<!-- main content -->
+	<div class="wrapper">
+        <div class="row">
+            <div class="col-3">
+                <div class="counter-light">
+					<p>
+						<i class="fas fa-users"></i>
+					</p>
+					<h3>7</h3>
+					<p>Total Projects</p>
+				</div>
+            </div>
+            <div class="col-3">
+                <div class="counter-light">
+					<p>
+						<i class="fas fa-database"></i>
+					</p>
+					<h3>690</h3>
+					<p>User</p>
+				</div>
+            </div>
+            <div class="col-3">
+                <div class="counter-light">
+					<p>
+						<i class="fas fa-table"></i>
+					</p>
+					<h3>1</h3>
+					<p>Superadmin</p>
+				</div>
+            </div>
+            <div class="col-3">
+                <div class="counter-light">
+					<p>
+						<i class="fas fa-plus"></i>
+					</p>
+					<p>Add New Project</p>
+				</div>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-9 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+                            Database Table List
+						</h3>
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+					<div class="card-content">
+						<table>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Project</th>
+									<th>Description</th>
+									<th>Manage</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>GASS</td>
+									<td>Project I</td>
+                                    <td>
+										<div class="avt action">
+											<div class="actionbtn" id="action-btn">
+												<i class="fas fa-ellipsis-h"></i>
+											</div>
+											<ul id="action-menu" class="action-menu">
+												<li class="action-menu-item">
+													<div class="action-card">
+														<i class="fas fa-edit"></i>
+														<span>Export</span>
+													</div>
+												</li>
+												<li class="action-menu-item">
+													<div class="action-card">
+														<i class="fas fa-trash"></i>
+														<span>Import</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+										
+										
+                                    </td>
+                                </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-3 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Percentage of Employees
+						</h3>
+						<i class="fas fa-ellipsis-h"></i>
+					</div>
+					<div class="card-content">
+						<div class="progress-wrapper">
+							<p>
+								GASS
+								<span class="float-right">1%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-success" style="width: 1%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Project II
+								<span class="float-right">5%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-primary" style="width:5%"></div>
+							</div>
+						</div>
+						<div class="progress-wrapper">
+							<p>
+								Project III
+								<span class="float-right">94%</span>
+							</p>
+							<div class="progress">
+								<div class="bg-warning" style="width:94%"></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<!-- end main content -->
+	<!-- import script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+	<!-- end import script -->
+</body>
+</html>
